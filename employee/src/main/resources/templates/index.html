@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header with search -->
+    <div class="header">
+      <h2>Employee Directory</h2>
+      <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search by name or email">
+        <button id="filterBtn">Filter</button>
+      </div>
+    </div>
+
+    <!-- Sort and Add Section -->
+    <div class="controls">
+      <div class="left-controls">
+        <label>Sort by:</label>
+        <select id="sortSelect">
+          <option value="name">Name</option>
+          <option value="email">Email</option>
+          <option value="department">Department</option>
+        </select>
+
+        <label>Show:</label>
+        <select id="limitSelect">
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+        </select>
+    
+        <button class="add-button" id="addEmployeeBtn">Add Employee</button>
+     
+    </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card-container" id="cardContainer"></div>
+  </div>
+
+  <!-- Add Employee Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h3>Add New Employee</h3>
+      <input type="text" id="empName" placeholder="Name">
+      <input type="email" id="empEmail" placeholder="Email">
+      <input type="text" id="empDepartment" placeholder="Department">
+      <input type="text" id="empRole" placeholder="Role">
+      <button id="submitEmployee">Add</button>
+    </div>
+  </div>
+
+  <script src="../static/js/data.js"></script>
+  <script src="../static/js/app.js"></script>
+</body>
+</html>
